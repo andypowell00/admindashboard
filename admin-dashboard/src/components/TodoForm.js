@@ -6,13 +6,7 @@ import TodoList from './TodoList';
 class TodoForm extends React.Component {
 constructor(props){
     super(props);
-    /*this.state = {
-        title: '',
-        description: '',
-        complete: false,
-        createDate : Date.now(),
-        category : 'todo'
-      };*/
+    
 }
 
 
@@ -27,7 +21,7 @@ constructor(props){
                  
                 <button type="submit" name="submit">Submit</button>
             </form>
-            <TodoList todolist={this.props.todolist} />
+            <TodoList todolist={this.props.todolist} deleteTodo={this.props.deleteTodo} />
             </div>
             
          

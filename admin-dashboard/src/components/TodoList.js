@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button, ListGroup, ListGroupItem } from 'reactstrap';
+import '../assets/Todo.css';
 
 class TodoList extends React.Component
  {
@@ -11,13 +13,13 @@ class TodoList extends React.Component
           const todos = this.props.todolist;
             return (
     
-             <ul>
+              <ListGroup className="todoList">
              {todos.map(todo =>
-               <li key={todo.title}>
-                 {todo.title}
-               </li>
+               <ListGroupItem key={todo.internalId} >
+                {todo.title}<Button color="danger" onClick={this.props.deleteTodo} value={todo.internalId}>X</Button> 
+               </ListGroupItem>
              )}
-           </ul>
+           </ListGroup>
 
             )}
 
